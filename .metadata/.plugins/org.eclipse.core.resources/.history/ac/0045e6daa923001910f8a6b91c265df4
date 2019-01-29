@@ -52,7 +52,8 @@ public class Persona {
 	}
 
 	public void crear(List<Persona> lp) {
-		
+		int i = lp.get(lp.size())+1;
+		lp.add(new Persona(i, "Persona" + i, r.nextInt(100) + 100));
 	}
 
 	/*

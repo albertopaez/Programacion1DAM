@@ -52,7 +52,6 @@ public class Persona {
 	}
 
 	public void crear(List<Persona> lp) {
-		
 	}
 
 	/*
