@@ -2,19 +2,11 @@ package ejercicio_03;
 
 public class Persona implements Humano {
 	
-	private String nif;
-	private String nombre;
-	private String apellidos;
-	private Direccion direccion;
+	protected String nif;
+	protected String nombre;
+	protected String apellidos;
+	protected Direccion direccion;
 	
-	
-	public Persona(String nif, String nombre, String apellidos, Direccion direccion) {
-		this.nif = nif;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.direccion = direccion;
-	}
-
 
 	public String getNif() {
 		return nif;
@@ -54,7 +46,7 @@ public class Persona implements Humano {
 	}
 	
 	public String indentificate() {
-		return "Persona";
+		return "Tipo Persona";
 	}
 	
 	
