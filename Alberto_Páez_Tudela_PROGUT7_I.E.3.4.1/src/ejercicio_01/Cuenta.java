@@ -4,8 +4,7 @@ public abstract class Cuenta {
 	
 	protected long numerocuenta;
 	protected double saldo;
-	protected Persona cliente = new Persona();
-	
+	protected Persona cliente;
 	
 
 	public long getNumerocuenta() {

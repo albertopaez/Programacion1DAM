@@ -28,7 +28,7 @@ public class CuentaAhorro extends Cuenta{
 
 	@Override
 	public void actualizarSaldo() {
-		saldo += saldo*interes;
+		saldo += (saldo*interes);
 		System.out.println("Saldo actualizado con exito. Su saldo actual es de "+getSaldo());
 	}
 	
@@ -40,7 +40,7 @@ public class CuentaAhorro extends Cuenta{
 	
 	@Override
 	public String toString() {
-		return "Numero de cuenta: "+getNumerocuenta()+"\nCliente: "+cliente.getNombreYApellidos()+
+		return "Numero de cuenta: "+getNumerocuenta()+"\nCliente: "+cliente.getNombre()+" "+cliente.getApellidos()+
 				"\nNIF: "+cliente.getNif()+"\nSaldo: "+getSaldo()+"\nInteres anual: "+getInteres()+"%";
 	}
 	

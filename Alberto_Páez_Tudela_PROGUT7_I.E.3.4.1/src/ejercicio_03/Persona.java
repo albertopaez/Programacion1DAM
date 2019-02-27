@@ -1,16 +1,18 @@
-package ejercicio_01;
+package ejercicio_03;
 
-public class Persona {
+public class Persona implements Humano {
 	
 	private String nif;
 	private String nombre;
 	private String apellidos;
+	private Direccion direccion;
 	
 	
-	public Persona(String nif, String nombre, String apellidos) {
+	public Persona(String nif, String nombre, String apellidos, Direccion direccion) {
 		this.nif = nif;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
+		this.direccion = direccion;
 	}
 
 
@@ -42,7 +44,18 @@ public class Persona {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
 	
+	public String indentificate() {
+		return "Persona";
+	}
 	
 	
 	

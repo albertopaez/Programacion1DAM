@@ -20,13 +20,13 @@ public class CuentaCorriente extends Cuenta {
 
 	@Override
 	public void actualizarSaldo() {
-		saldo += saldo*1.5;
+		saldo += (saldo*1.5);
 		System.out.println("Saldo actualizado con exito. Su saldo actual es de "+getSaldo());
 	}
 	
 	@Override
 	public String toString() {
-		return "Numero de cuenta: "+getNumerocuenta()+"\nCliente: "+cliente.getNombreYApellidos()+
+		return "Numero de cuenta: "+getNumerocuenta()+"\nCliente: "+cliente.getNombre()+" "+cliente.getApellidos()+
 				"\nNIF: "+cliente.getNif()+"\nSaldo: "+getSaldo()+"\nInteres anual: 1'5%";
 	}
 	
