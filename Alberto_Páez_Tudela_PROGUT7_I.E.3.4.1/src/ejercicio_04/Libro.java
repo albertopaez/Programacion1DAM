@@ -1,37 +1,68 @@
 package ejercicio_04;
 
-public class Libro implements Prestable{
-	private String codigo;
-	private String titulo;
-	private int anioPublicacion;
+import java.util.List;
+
+public class Libro extends Publicacion implements Prestable{
 	private boolean prestado; //true = esta prestado
 	
 	
+	public Libro(String codigo, String titulo, int anioPublicacion) {
+		this.codigo = codigo;
+		this.titulo = titulo;
+		this.anioPublicacion = anioPublicacion;
+		this.prestado=false;
+	}
 	
 	
 	
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public int getAnioPublicacion() {
+		return anioPublicacion;
+	}
+
 	
-	
-	
-	
+	public int cuentaPrestados(List<Libro> libros) {
+		int cuenta = 0;
+		for (Libro i : libros) {
+			if(i.prestado==true) {
+				cuenta++;
+			}
+		}
+		return cuenta;
+	}
+
 	
 	@Override
 	public void prestar() {
-		// TODO Auto-generated method stub
+		if(prestado==true) {
+			prestado=true;
+		}else {
+			System.out.println("El libro ya se encuentra prestado");
+		}
+		
 		
 	}
 	@Override
 	public void devolver() {
-		// TODO Auto-generated method stub
-		
+		if(prestado==false) {
+			prestado=true;
+		}else {
+			System.out.println("El libro ya se encuentra devuelto");
+		}
 	}
 	@Override
-	public void prestado() {
-		// TODO Auto-generated method stub
-		
+	public boolean prestado() {
+		return prestado;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "";
+	}
 	
 	
 }
