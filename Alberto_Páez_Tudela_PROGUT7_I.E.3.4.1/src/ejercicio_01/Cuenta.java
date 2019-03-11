@@ -27,7 +27,5 @@ public abstract class Cuenta {
 	
 	public abstract void actualizarSaldo();
 	
-	
-	
 
 }
